@@ -19,6 +19,16 @@ function Landing  () {
   }, []);
 
 
+   const cardObj = {
+     card1: "A social media platform for developers to connect with eachother!",
+     card2: "An app that will record and analyze your speech to prepare you for the big stage.",
+     card3: "Need a password? We've got you covered!",
+     name1: "Let's Connect",
+     name2: "Speech Therapy",
+     name3: "Password Generator"
+    }
+
+
 
   return (
     <div className="container bg-fixed bg-cover" >
@@ -54,9 +64,18 @@ function Landing  () {
       
       
       <div className="flex flex-wrap container mt-10">
-        <Card />
-        <Card />
-        <Card />
+        <Card
+          text={cardObj.card1}
+          appname={cardObj.name1}
+        />
+        <Card
+        text={cardObj.card2}
+          appname={cardObj.name2}
+        />
+        <Card
+        text={cardObj.card3}
+          appname={cardObj.name3}
+        />
         
       </div>
       
