@@ -2,6 +2,9 @@ import React, {useEffect} from "react";
 import Navbar from "../components/layout/Navbar"
 import abstract from "../assets/abstract.jpg"
 import downarrow from "../assets/down-arrow.png"
+import main from "../assets/main.jpg"
+import security from "../assets/security.jpg"
+
 import Card from "../components/Projectcard"
 
 import AOS from "aos";
@@ -25,7 +28,10 @@ function Landing  () {
      card3: "Need a password? We've got you covered!",
      name1: "Let's Connect",
      name2: "Speech Therapy",
-     name3: "Password Generator"
+     name3: "Password Generator",
+     photo1: { abstract },
+     photo2: { main }, 
+     photo3: {security}
     }
 
 
@@ -40,7 +46,6 @@ function Landing  () {
         </div>
       </div>
 
-      {/* <hr data-aos="fade-left" className=" rounded border-solid w-1/3 justify-center my-5 mx-auto border-2 border-gray-800 " /> */}
       
       <div data-aos="fade-left" className="flex lg:px-40 lg:mx-20  justify-center h-48  ">
         <div>
@@ -49,12 +54,10 @@ function Landing  () {
       </div>
 
       <hr data-aos="fade-right" className="rounded border-solid w-1/2 justify-center my-5 mx-auto border-2 border-gray-800 "/>
-
        <div data-aos="zoom-in-up" className="flex items-center justify-center h-48 ">
         <h1  className="text-4xl">Projects</h1>
       </div>
       <div className="flex justify-center">
-
         <img data-aos-delay="1000" data-aos="zoom-in-up" className="animate-bounce h-10" src={downarrow}></img>
 
       </div>
@@ -63,18 +66,22 @@ function Landing  () {
  <div  className="h-32 bg-gray-800 bg-fixed shadow-xl"></div>
       
       
-      <div className="flex flex-wrap container mt-10">
+      <div className="flex flex-wrap container bg-gray-600 pt-10">
         <Card
           text={cardObj.card1}
           appname={cardObj.name1}
+          photo={cardObj.photo2.main}
         />
         <Card
         text={cardObj.card2}
           appname={cardObj.name2}
+                    photo={cardObj.photo1.abstract}
+
         />
         <Card
         text={cardObj.card3}
           appname={cardObj.name3}
+          photo={cardObj.photo3.security}
         />
         
       </div>

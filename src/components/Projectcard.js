@@ -7,7 +7,9 @@ function Card (props) {
 
     return (
         <div data-aos="fade-right" className=" md:w-1/3   p-10 ">
-        <div  className=" md:h-48 h-32 bg-cover bg-gray-400 p-4 rounded shadow-lg" style={{ backgroundImage: `url(${abstract})` }}>
+            {/* <div className="md:h-48 h-32 bg-cover bg-gray-400 p-4 rounded shadow-lg" style={{ backgroundImage: `url(${abstract})` }}> */}
+            <div data-aos="fade-right">
+                <img className="md:h-48 h-32 w-full object-cover  rounded shadow-lg" src={props.photo}/>
             </div>
                 
                   <div data-aos="fade-up" className="px-4 -mt-4">
